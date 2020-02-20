@@ -1,5 +1,6 @@
 package com.example.builddemo;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -10,4 +11,9 @@ class BuilddemoApplicationTests {
     void contextLoads() {
     }
 
+    @Test
+    void testSumFunction() {
+        DummyClass dummyClass = new DummyClass();
+        Assertions.assertEquals(2, dummyClass.somme(1,2));
+    }
 }
