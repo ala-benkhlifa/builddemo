@@ -1,4 +1,4 @@
-name: clean-install
+name: build
 
 on: [push]
 
@@ -13,4 +13,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvnw clean install
+      run: ./mvnw spring-boot:build
