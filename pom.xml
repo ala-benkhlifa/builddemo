@@ -19,7 +19,7 @@
         <sonar.projectKey>ala-benkhlifa_builddemo</sonar.projectKey>
         <sonar.organization>ala-benkhlifa</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.login>7766cce6dd09c5150ea32341ed8b1b0e57750195</sonar.login>
+        <sonar.login>e55ee2c42a19a17fd4a93f25d157fe09edf82b12</sonar.login>
     </properties>
 
     <dependencies>
