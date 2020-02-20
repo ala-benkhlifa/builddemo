@@ -14,6 +14,6 @@ class BuilddemoApplicationTests {
     @Test
     void testSumFunction() {
         DummyClass dummyClass = new DummyClass();
-        Assertions.assertEquals(2, dummyClass.somme(1,2));
+        Assertions.assertEquals(3, dummyClass.somme(1,2));
     }
 }
