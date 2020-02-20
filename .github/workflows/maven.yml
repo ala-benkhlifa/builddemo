@@ -16,5 +16,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run Test
       run: mvn test
-    - name: Run SonarCloud
+    - uses: SonarSource/sonarcloud-github-action@v1.1
+    - name: SonarCloud
       run: mvn verify sonar:sonar
+      
