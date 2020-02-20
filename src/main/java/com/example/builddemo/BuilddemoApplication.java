@@ -12,5 +12,6 @@ public class BuilddemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(BuilddemoApplication.class, args);
         log.info("Hello World !");
+        log
     }
 }
