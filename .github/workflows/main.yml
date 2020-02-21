@@ -1,13 +1,21 @@
-name: Heroku
+name: Deploy
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Deploy
-      uses: actions/heroku@1.0.0
-      env:
-        HEROKU_API_KEY: d2519778-4061-44bc-9765-9b0b512a5794
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.0.0 # This is the action
+        with:
+          heroku_api_key: ${d2519778-4061-44bc-9765-9b0b512a5794}
+          heroku_app_name: "builddemogiworkflow" #Must be unique in Heroku
+          heroku_email: "ala.ben-khlifa@talan.com"
+          buildpack: "SOME BUILDPACK" #OPTIONAL
+          branch: "master" #OPTIONAL and DEFAULT - 'HEAD' (a.k.a your current branch)
+          dontuseforce: false #OPTIONAL and DEFAULT - false
+          usedocker: false #OPTIONAL and DEFAULT - false
