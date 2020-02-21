@@ -18,8 +18,6 @@ jobs:
       run: mvn test
     - name: SonarCloud
     - uses: SonarSource/sonarcloud-github-action@v1.1
-      with:
-        SONAR_TOKEN: 91c1c77b8fea9fea598de0d3f49abf4b1c7ca515
       env:
-        SONAR_TOKEN: 91c1c77b8fea9fea598de0d3f49abf4b1c7ca515
+        SONAR_TOKEN: a1063d00ce6ba9aa5fe576fb9444c3392c18a34f
       
