@@ -1,0 +1,13 @@
+name: Heroku
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Deploy
+      uses: actions/heroku@1.0.0
+      env:
+        HEROKU_API_KEY: d2519778-4061-44bc-9765-9b0b512a5794
