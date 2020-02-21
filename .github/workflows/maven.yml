@@ -14,11 +14,18 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Run Test
-      run: mvn test
-    - name: SonarCloud
-      run: mvn verify sonar:sonar
-      env:
-        SONAR_TOKEN: a1063d00ce6ba9aa5fe576fb9444c3392c18a34f
-        GITHUB_TOKEN: 7b31e3bde0b32afc11f62690d21a057a47679657
-      
+  test:
+    name: test
+    needs: build
+    steps:
+      - name: Run Test
+        run: mvn test
+  sonar:
+    name: sonar
+    needs: [build, test]
+    steps:
+      - name: SonarCloud
+        run: mvn verify sonar:sonar
+        env:
+          SONAR_TOKEN: a1063d00ce6ba9aa5fe576fb9444c3392c18a34f
+          GITHUB_TOKEN: 7b31e3bde0b32afc11f62690d21a057a47679657
