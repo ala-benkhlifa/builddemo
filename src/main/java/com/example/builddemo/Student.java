@@ -2,6 +2,7 @@ package com.example.builddemo;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +11,6 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-@Builder
 public class Student {
 
     @Id
@@ -19,4 +19,13 @@ public class Student {
     private String name;
     private String surName;
     private Long age;
+
+    public Student() {
+    }
+
+    public Student(String name, String surName, Long age) {
+        this.name = name;
+        this.surName = surName;
+        this.age = age;
+    }
 }
