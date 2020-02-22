@@ -24,7 +24,7 @@ public class BuilddemoApplication {
 
     @Bean
     CommandLineRunner commandLineRunner (StudentRepository repository) {
-        Student student = new Student("Ala", "Ben Khlifa", 26L);
+        Student student = new Student("Ala", "Ben Khlifa", 27L);
         repository.save(student);
         log.info("Student added successfully!");
         String[] activeProfiles = environment.getDefaultProfiles();
