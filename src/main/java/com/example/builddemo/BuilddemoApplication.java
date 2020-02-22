@@ -20,7 +20,6 @@ public class BuilddemoApplication {
         repository.save(student);
         log.info("Student added successfully!");
         log.info(student.toString());
-
         return null;
     }
 }
